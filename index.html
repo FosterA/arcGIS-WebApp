@@ -1,0 +1,45 @@
+<html>
+  <head>
+  	<link rel="stylesheet" href="https://js.arcgis.com/3.15/esri/css/esri.css">
+	<script src="https://js.arcgis.com/3.15/"></script>
+  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    
+    <style>
+  	html, body, #mapDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    }
+	</style>
+    
+    <script>
+  		require(["esri/map", "dojo/domReady!"], function(Map) {
+    	// code to create the map and add a basemap will go here
+    	var map = new Map("mapDiv", {
+    		center: [-56.049, 38.485],
+    		zoom: 3,
+    		basemap: "streets"
+  			});
+  	  map.on("click", function(evt){
+      console.log(evt.mapPoint.x);
+
+
+
+    });
+
+  
+    
+});
+
+	</script>
+		    
+    </head>
+    
+	<body class="claro">
+  		<div id="mapDiv"></div>
+	</body>
+
+</html>
